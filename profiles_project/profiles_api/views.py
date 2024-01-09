@@ -1,3 +1,5 @@
 from django.shortcuts import render
+from profiles_api import models
+from django.contrib import admin
 
-# Create your views here.
+admin.site.register(models.UserProfile)
