@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'rest_framework',
-    # 'rest_framework.authtoken',
-    # 'profiles_Api',
+    'rest_framework.authtoken',
+    'rest_framework',
+    'profile_api',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+AUTH_USER_MODEL = 'profile_api.UserProfile'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
