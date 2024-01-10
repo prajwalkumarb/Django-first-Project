@@ -6,7 +6,7 @@ class HelloSerializer(serializers.Serializer):
     enter_name = serializers.CharField(max_length=20)
     
 class  UserProfileSerializer(serializers.ModelSerializer):
-    """Serializer a user profile objext"""
+    """Serializer a user profile object"""
     
     class Meta:
         model = models.UserProfile
@@ -26,14 +26,7 @@ class  UserProfileSerializer(serializers.ModelSerializer):
             password = validated_data['password']
         )
         return user
-    
-#     def update(self, instance, validated_data):
-#         """Handle updating user account"""
-#         if 'password' in validated_data:
-#             password = validated_data.pop('password')
-#             instance.set_password(password)
 
-#         return super().update(instance, validated_data)
     
 class ProfileFeedItemSerializer(serializers.ModelSerializer):
     """Serializes profile feed items"""

@@ -69,4 +69,4 @@ class ProfileFeedItem(models.Model):
     
     def __str__(self):
         """Return the model as a string"""
-        return super().status_text
+        return self.status_text
